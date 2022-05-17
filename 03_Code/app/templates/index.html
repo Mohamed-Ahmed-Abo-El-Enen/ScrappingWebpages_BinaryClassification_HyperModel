@@ -1,0 +1,30 @@
+<center>
+    <form method="POST">
+        <label>Classify Site</label>
+        <p>
+            <label>page_source_path : </label><input name="page_source_path" value={{page_source_path_val}}><br><br>
+            <label>link_url : </label><input name="link_url" value={{link_url_val}}><br><br>
+            <label>link_domain_name : </label><input id="link_domain_name" name="link_domain_name" value={{link_domain_name_val}}><br><br>
+            <label>content_name : </label><input id="content_name" name="content_name" value={{content_name_val}}><br><br>
+            <label>trans_content_name : </label><input id="trans_content_name" name="trans_content_name" value={{trans_content_name_val}}><br><br>
+            <label>alt_content_names : </label><input id="alt_content_names" name="alt_content_names" value={{alt_content_names_val}}><br><br>
+            <label>campaign_name : </label><input id="campaign_name" name="campaign_name" value={{campaign_name_val}}><br><br>
+            <label>number_of_episodes : </label><input id="number_of_episodes" name="number_of_episodes"  value={{number_of_episodes_val}}><br><br>
+        </p>
+        <p>
+            <label>Make Sure You check them if you train SGD,SVM,XGBOOST, LSTM_Attention on hybrid mode (Text, Other Features) </label><br>
+            <input type="checkbox" name="categorical_features" id="use_categorical_features" value="use_categorical_features"> Use Categorical Features </input><br>
+            <input type="checkbox" name="numeric_features" id="use_numeric_features" value="use_numeric_features"> Use Numeric Features </input><br>
+        </p>
+
+        <p>
+            <input type="radio" name="classifier_type" id="sgd_clf" value="SGD" checked> SGD_Clf </input><br>
+            <input type="radio" name="classifier_type" id="svm_clf" value="SVM"> SVM_Clf </input><br>
+            <input type="radio" name="classifier_type" id="xgboost_clf" value="XGBoost"> XGBoost_Clf </input><br>
+            <input type="radio" name="classifier_type" id="lstm" value="LSTM"> LSTM_Attention_Clf </input><br>
+            <input type="radio" name="classifier_type" id="bert" value="BERT"> BERT_Clf </input><br>
+        </p>
+        <input type="submit" value="Find Dialect">
+    </form>
+    <h3>Class: {{res}}<h3>
+</center>
